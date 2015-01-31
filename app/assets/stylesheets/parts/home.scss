@@ -1,0 +1,61 @@
+@import "../settings";
+@import "compass/css3";
+
+#home {
+  padding: 0px;
+
+  #home-header {
+    padding-top: 40px;
+
+    #contact-button {
+      float: left;
+
+      a.call-to-button {
+        height: $home-contact-btn-height;
+        line-height: $home-contact-btn-height;
+      }
+    }
+
+    #title {
+      text-align: center;
+      color: white;
+      padding-bottom: 40px;
+
+      h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: $home-title-font-size;
+        margin-bottom: 0px;
+      }
+
+      h2 {
+        text-transform: capitalize;
+        font-family: $font-second;
+        font-size: $home-subtitle-font-size;
+      }
+
+      .separator {
+        width: $home-separator-circle-size;
+        height: $home-separator-circle-size;
+        background: white;
+        @include border-radius($home-separator-circle-size);
+        margin: $home-separator-margin auto;
+        position: relative;
+
+        &::before, &::after {
+          content: " ";
+          display: block;
+          height: $titles-border-width;
+          width: $home-separator-width;
+          background: white;
+          position: absolute;
+          top: 50%;
+          margin-top: -$titles-border-width / 2;
+        }
+
+        &::before { left: -($home-separator-width + $home-separator-margin); }
+        &::after { right: -($home-separator-width + $home-separator-margin); }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+menu=Menu
+
+home=Accueil
+home.freelance=Développeur Freelance
+
+
+introduction=Présentation
+
+
+technologies=Technologies
+
+
+works.mine=Mes travaux
+
+
+contact.me=Me contacter

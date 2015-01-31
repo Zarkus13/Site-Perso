@@ -1,0 +1,132 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@title</title>
+
+        <!-- Character set -->
+        <meta charset="UTF-8">
+
+        <!-- Configure viewport for mobile / tabled devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <!-- Define keywords for search engines -->
+        <meta name="keywords" content="Keyword1, Keyword2, Keyword3">
+
+        <!-- Define a description of your web page -->
+        <meta name="description" content="This is the description!">
+
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+
+        <!-- Call Google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
+
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/font-awesome.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/animate.min.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.min.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/customize.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+    </head>
+    <body>
+        <!-- TOP NAV -->
+        <div id="top-nav" class="scrollto">
+            <div class="helper">
+                <nav>
+                    <a href="#home">@Messages("home")</a>
+                    <a href="#introduction">@Messages("introduction")</a>
+                    <a href="#technologies">@Messages("technologies")</a>
+                    <a href="#works">@Messages("works.mine")</a>
+                    <a href="#contact">@Messages("contact.me")</a>
+                </nav>
+            </div>
+        </div>
+
+            <!-- OVERLAY NAV -->
+        <div class="overlay-menu">
+            <button type="button" class="overlay-menu-close">X</button>
+            <nav>
+                <ul>
+                    <li><a href="#home">@Messages("home")</a></li>
+                    <li><a href="#introduction">@Messages("introduction")</a></li>
+                    <li><a href="#technologies">@Messages("technologies")</a></li>
+                    <li><a href="#works">@Messages("works.mine")</a></li>
+                    <li><a href="#contact">@Messages("contact.me")</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- HOME -->
+        <div id="home">
+
+            <div id="home-header" class="solid-background">
+                <div class="content">
+
+                    <!-- Header -->
+                    <div id="header">
+
+                    <!-- Logo Image
+                    <div id="logo">
+                         <img src="images/logo.png" width="98" height="28" alt="" />
+                    </div>
+                    -->
+
+                            <!-- Logo text -->
+                        <div id="contact-button">
+                            <a href="" class="call-to-button">@Messages("contact.me")</a>
+                        </div>
+
+                            <!-- Menu button -->
+                        <div class="menu-button" id="open-overlay">
+                            <span class="menu-label">@Messages("menu")</span>
+                            <div class="menu-lines">
+                                <span class="menu-line"></span>
+                                <span class="menu-line"></span>
+                                <span class="menu-line"></span>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                    <!-- End: Header -->
+
+                    <!-- Intro -->
+                    <div id="title">
+                        <h1>
+                            Alexis Weil
+                        </h1>
+                        <div class="separator"></div>
+                        <h2>@Messages("home.freelance")</h2>
+                    </div>
+                </div>
+                <!-- End: Content -->
+
+
+                <div class="border-bottom"></div>
+            </div>
+        </div>
+        <!-- END: HOME -->
+
+        @content
+
+        <!-- JAVASCRIPT -->
+        <script type="text/javascript" src="@routes.Assets.at("scripts/vendors/jquery.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("scripts/vendors/easing.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("scripts/vendors/modernizr.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("scripts/vendors/swipebox.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("scripts/vendors/flexslider.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("scripts/vendors/tipTip.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("scripts/vendors/wow.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("scripts/vendors/menu.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("scripts/custom.js")"></script>
+        <script>
+            new WOW().init();
+        </script>
+    </body>
+</html>
