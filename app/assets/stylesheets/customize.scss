@@ -1,12 +1,22 @@
 @import "settings";
 
 /*-- General --*/
-body { font-family: $font-main, sans-serif; font-size: 14px; background: #E6EBEC; }
+body { font-family: $font-main, sans-serif; font-size: 14px; background: $color-second; color: $color-second-text; }
 a { color: #990000; }
-h1, h2, h3, h4, h5, h6 { font-weight: normal; font-family: $font-title, sans-serif; color: white; }
-#preloader { background: #E6EBEC url('images/preloader-default.svg') center center no-repeat; }
-.section_title h2 { font-size: 36px; font-weight: 300; color: #000; }
-.section_title .title_border { background: $color-main; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-family: $font-title, sans-serif; color: $color-second-text; }
+#preloader { background: $color-second url('images/preloader-default.svg') center center no-repeat; }
+.section_title {
+  h2 { font-size: 36px; font-weight: 300; }
+  .title_border { background: $color-main; }
+}
+
+.solid-background {
+  h1, h2, h3, h4, h5, h6 { color: white; }
+  .section_title {
+    .title_border { background: white; }
+  }
+}
+
 .separator-line { background: #DADADA; }
 
 /*-- Logo + Menu --*/
@@ -33,7 +43,7 @@ div.menu-button span.menu-line { background: #FFF; }
   }
 }
 #top-nav { background: $color-main; }
-#top-nav div.helper nav a { font-size: 13px; color: #FFF; }
+#top-nav div.helper nav a { font-size: 1em; color: #FFF; }
 
 /*-- Home variations --*/
 #intro h1 { font-size: 46px; font-weight: 300; color: #FFF; }
@@ -55,28 +65,28 @@ a.call-to-button-transparent { font-size: 17px; color: #FFF; border: 1px solid #
 .pattern-background a.call-to-button-transparent { border: 1px solid rgba(255, 255, 255, 0.35); }
 
 /*-- Features --*/
-#features1 { background: #E6EBEC; }
+#features1 { background: $color-second; }
 #features1 .feature { border-bottom: 1px solid #DDD; }
 #features1 .feature-details h2 { font-size: 28px; font-weight: 300; }
 #features1 .feature-details .title-separator { background: $color-main; }
 #features1 .feature-details .feature-text { font-size: 13px; color: #7F7F7F; }
-#features2 { background: #E6EBEC; }
+#features2 { background: $color-second; }
 #features2 .section_intro { color: #7F7F7F; }
 .feature-content p { color: #7F7F7F; }
 .feature-circle { color: #FFF; background: $color-main; }
 
 /*-- Screenshots --*/
-#screenshots1 { background: #E6EBEC; }
+#screenshots1 { background: $color-second; }
 #screenshots1 .section_intro { color: #7F7F7F; }
 #screenshot-carousel .carousel-viewport ul li { background: #FFF; }
 .carousel-direction-nav a { color: #FFF; background: $color-main; -webkit-box-shadow: 1px 2px 0px 0px $color-main-darker; -moz-box-shadow: 1px 2px 0px 0px $color-main-darker; }
 .carousel-direction-nav a:hover { background: #3CD996; }
-#screenshots2 { background: #E6EBEC; color: #FFF; }
+#screenshots2 { background: $color-second; color: #FFF; }
 #screenshot-gallery ul li div { background: #FFF; -webkit-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); -moz-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); }
 #screenshot-gallery ul li h4 { font-size: 14px; }
 
 /*-- Services --*/
-#services { background: #E6EBEC; }
+#services { background: $color-second; }
 #services .section_intro { color: #7F7F7F; }
 #service-items ul li .service-content { background: #FFF; -webkit-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); -moz-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); }
 #service-items ul li .service-circle { background: #C1CED0; border-radius: 68px; -moz-border-radius: 68px; -webkit-border-radius: 68px; }
@@ -87,7 +97,7 @@ a.call-to-button-transparent { font-size: 17px; color: #FFF; border: 1px solid #
 .close-service a:hover { border: 1px solid #999; color: #000; }
 
 /*-- Contact --*/
-#contact { background: #E6EBEC; }
+#contact { background: $color-second; }
 #contact .section_intro { color: #7F7F7F; }
 #contact-form input[type="text"]#form-name { background: #FFF url('images/name-bg.png') 20px 19px no-repeat; }
 #contact-form input[type="text"]#form-mail { background: #FFF url('images/mail-bg.png') 18px 24px no-repeat; }
@@ -108,7 +118,7 @@ p#required { font-size: 11px; color: #999; }
 /*-- Video tour --*/
 #video-tour { background: $color-main; }
 #video-tour .section_title h2 { color: #FFF; }
-#video-tour .section_title .title_border { background: #E6EBEC; }
+#video-tour .section_title .title_border { background: $color-second; }
 #video-tour .section_intro { color: #FFF; }
 
 /*-- Subscribe section --*/
@@ -125,10 +135,10 @@ p#required { font-size: 11px; color: #999; }
 #quote { background: $color-main; }
 .quote-content { font-size: 36px; font-weight: 300; color: #FFF; }
 .quote-author { font-size: 15px; color: #FFF; font-style: italic; }
-.author-avatar { background: #E6EBEC; }
+.author-avatar { background: $color-second; }
 
 /*-- Pricing --*/
-#pricing { background: #E6EBEC; }
+#pricing { background: $color-second; }
 #pricing .section_intro { color: #7F7F7F; }
 .pricing-column { background: #FFF; -webkit-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); -moz-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); }
 .pricing-column ul li.plan-title { font-size: 20px; font-weight: 600; color: #000;  }
@@ -147,7 +157,7 @@ p#required { font-size: 11px; color: #999; }
 .fact-desc { font-size: 15px; color: #FFF; background: $color-main; }
 
 /*-- Testimonials --*/
-#testimonials { background: #E6EBEC; }
+#testimonials { background: $color-second; }
 #testimonials-slider { color: #333; }
 .testimonial-avatar { background: #FFFFFF; }
 .testimonial-content { background: #FFF; font-size: 15px; color: #7F7F7F; -webkit-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); -moz-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); }
@@ -157,7 +167,7 @@ p#required { font-size: 11px; color: #999; }
 .testimonials-control-nav li a.testimonials-active { background: $color-main; border: 1px solid $color-main-darker; }
 
 /*-- Our Team --*/
-#about { background: #E6EBEC; }
+#about { background: $color-second; }
 #about .section_intro { color: #7F7F7F; }
 .member { background: #FFF; -webkit-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); -moz-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); }
 .position { background: $color-main; }

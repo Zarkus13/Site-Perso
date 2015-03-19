@@ -1,0 +1,65 @@
+@()
+
+<!-- HOME -->
+<section id="home">
+
+    <div id="home-header" class="solid-background">
+        <div class="content">
+            <div id="header">
+                <div id="contact-button">
+                    <a href="" class="call-to-button">@Messages("contact.me")</a>
+                </div>
+
+                <div class="menu-button" id="open-overlay">
+                    <span class="menu-label">@Messages("menu")</span>
+                    <div class="menu-lines">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+            <div id="title">
+                <h1>Alexis Weil</h1>
+                <div class="separator"></div>
+                <h2>@Messages("home.freelance")</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="home-technologies">
+        <div class="border-top"></div>
+        <div class="border-bottom"></div>
+
+        <div class="parallax" data-background="@routes.Assets.at("images/bg-city.jpg")"></div>
+
+        <div class="technologies content">
+            <div class="technology one_fourth wow fadeInUpBig">
+                <i class="tech-scala"></i>
+                <h3 class="title">Scala</h3>
+            </div>
+
+            <div class="technology one_fourth wow fadeInUpBig" data-wow-delay="0.1s">
+                <i class="tech-java"></i>
+                <h3 class="title">Java</h3>
+            </div>
+
+            <div class="technology one_fourth wow fadeInUpBig" data-wow-delay="0.2s">
+                <i class="tech-android"></i>
+                <h3 class="title">Android</h3>
+            </div>
+
+            <div class="technology one_fourth_last wow fadeInUpBig" data-wow-delay="0.3s">
+                <i class="tech-web"></i>
+                <h3 class="title">Web</h3>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</section>
+<!-- END: HOME -->

@@ -1,0 +1,16 @@
+@import "../settings";
+@import "compass/css3";
+
+#experiences {
+  
+  #first-experience {
+    max-width: $introduction-experiences-first-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .one_half, .one_half_last {
+    margin-bottom: 0px;
+  }
+  
+}

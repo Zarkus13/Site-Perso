@@ -6,6 +6,7 @@
 
   #home-header {
     padding-top: 40px;
+    position: relative;
 
     #contact-button {
       float: left;
@@ -19,7 +20,7 @@
     #title {
       text-align: center;
       color: white;
-      padding-bottom: 40px;
+      padding-bottom: $home-title-padding-bottom;
 
       h1 {
         text-transform: uppercase;
@@ -31,7 +32,8 @@
       h2 {
         text-transform: capitalize;
         font-family: $font-second;
-        font-size: $home-subtitle-font-size;
+        font-size: $subtitles-font-size;
+        margin-bottom: 0px;
       }
 
       .separator {
@@ -56,6 +58,71 @@
         &::before { left: -($home-separator-width + $home-separator-margin); }
         &::after { right: -($home-separator-width + $home-separator-margin); }
       }
+
+      @media screen and (max-width: 960px) {
+        h1 { font-size: $home-title-font-size-960; }
+        h2 { font-size: $subtitles-font-size-960; }
+        .separator {
+          &::before, &::after { width: $home-separator-width-960; }
+          &::before { left: -($home-separator-width-960 + $home-separator-margin); }
+          &::after { right: -($home-separator-width-960 + $home-separator-margin); }
+        }
+      }
+
+      
+      @media screen and (max-width: 700px) {
+        h1 { font-size: $home-title-font-size-700; }
+        h2 { font-size: $subtitles-font-size-700; }
+        .separator {
+          &::before, &::after { width: $home-separator-width-700; }
+          &::before { left: -($home-separator-width-700 + $home-separator-margin); }
+          &::after { right: -($home-separator-width-700 + $home-separator-margin); }
+        }
+      }
+      
+
+      @media screen and (max-width: 500px) {
+        h1 { font-size: $home-title-font-size-500; }
+        h2 { font-size: $subtitles-font-size-500; }
+        .separator {
+          &::before, &::after { width: $home-separator-width-500; }
+          &::before { left: -($home-separator-width-500 + $home-separator-margin); }
+          &::after { right: -($home-separator-width-500 + $home-separator-margin); }
+        }
+      }
+
+      @media screen and (max-width: 420px) {
+        h1 { font-size: $home-title-font-size-420; }
+        h2 { font-size: $subtitles-font-size-420; }
+        .separator {
+          &::before, &::after { width: $home-separator-width-420; }
+          &::before { left: -($home-separator-width-420 + $home-separator-margin); }
+          &::after { right: -($home-separator-width-420 + $home-separator-margin); }
+        }
+      }
+
+      @media screen and (max-width: 380px) {
+        h1 { font-size: $home-title-font-size-380; }
+        h2 { font-size: $subtitles-font-size-380; }
+        .separator {
+          &::before, &::after { width: $home-separator-width-380; }
+          &::before { left: -($home-separator-width-380 + $home-separator-margin); }
+          &::after { right: -($home-separator-width-380 + $home-separator-margin); }
+        }
+      }
+    }
+  }
+
+  #home-technologies {
+    padding: $home-technologies-padding 0px $home-technologies-padding - $home-technologies-margin-bottom;
+    @media screen and (max-width: 700px) {
+      padding: $home-technologies-padding-700 0px $home-technologies-padding-700 - $home-technologies-margin-bottom;
+    }
+    position: relative;
+
+    .technologies {
+      color: white;
+      h3 { color: white; }
     }
   }
 }

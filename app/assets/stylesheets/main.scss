@@ -1,6 +1,164 @@
 
 @import "settings";
+@import "compass/css3";
+
+* { box-sizing: border-box; }
 
 .content { width: $content-width; margin: auto; }
 
+section {
+  &.part {
+    padding: $parts-padding;
+    position: relative;
+    
+    &.solid-background {
+      color: white;
+    }
+    
+    .section_title {
+      text-transform: uppercase;
+      h2 { font-size: $subtitles-font-size; }
+    }
+
+    .section-intro { 
+      width: 100%; 
+      margin: 0 auto; 
+      margin-bottom: 30px;
+      line-height: 180%; 
+      font-size: 1.4em;
+      font-weight: bold;
+      text-align: center; 
+    }
+  }
+}
+
+.round-picture {
+  width: $round-pictures-size;
+  height: $round-pictures-size;
+  line-height: $round-pictures-size;
+  border: $round-pictures-border-size solid $round-pictures-border-color;
+  @include border-radius($round-pictures-size);
+  overflow: hidden;
+  display: inline-block;
+
+  img {
+    width: $round-pictures-size;
+    height: $round-pictures-size;
+  }
+}
+
+.special-content { 
+  position: relative; 
+//  width: $special-contents-width;
+  width: 100%;
+  padding: $special-contents-padding / 2 $special-contents-padding;
+  line-height: 170%; 
+  background: $special-contents-bg-color;
+  font-size: $special-contents-font-size; 
+  color: $special-contents-color;
+  @include border-radius($special-contents-border-radius);
+  -webkit-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1);
+  -moz-box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); 
+  box-shadow: 1px 2px 0px 0px rgba(196,208,210,1); 
+  
+  .title {
+    margin-bottom: 10px;
+    span {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: darken($special-contents-color, 15%);
+    }
+  }
+  
+  &.with-picture { 
+    padding-top: $special-contents-padding * 1.5;
+    margin-top: $round-pictures-size/2 + 20px;
+
+    .round-picture {
+      position: absolute;
+      left: 50%;
+      margin-left: -$round-pictures-size/2;
+      top: -$round-pictures-size/2;
+    }
+  }
+}
+
+.technologies {
+  .technology {
+    text-align: center;
+    margin-bottom: $home-technologies-margin-bottom;
+
+    i {
+      font-size: $home-technologies-icon-size;
+
+      @media screen and (max-width: 700px) { font-size: $home-technologies-icon-size-700; }
+      @media screen and (max-width: 380px) { font-size: $home-technologies-icon-size-380; }
+    }
+
+    .title {
+      font-family: $font-title;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: $home-technologies-title-size;
+      margin-top: 15px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1200px) {
+  .content { width: $content-width-1200; }
+}
+
+@media screen and (max-width: 960px) {
+  section.part { 
+    padding: $parts-padding-960;
+    .section_title h2 { font-size: $subtitles-font-size-960; }
+  }
+  .content { width: $content-width-960; }
+//  .special-content { width: $special-contents-width-960; }
+}
+
+@media screen and (max-width: 700px) {
+  section.part { 
+    padding: $parts-padding-700;
+    .section_title h2 { font-size: $subtitles-font-size-700; }
+  }
+  .content { width: $content-width-700; }
+  .one_half, .one_half_last {
+    width: 100%;
+    margin-right: 0px;
+    float: none;
+  }
+//  .special-content { width: $special-contents-width-700; }
+}
+
+@media screen and (max-width: 500px) {
+  .content { width: $content-width-500; }
+//  .special-content { width: $special-contents-width-500; }
+  section.part .section_title h2 { font-size: $subtitles-font-size-500; }
+}
+
+@media screen and (max-width: 420px) {
+  .content { width: $content-width-420; }
+//  .special-content { width: $special-contents-width-420; }
+  section.part .section_title h2 { font-size: $subtitles-font-size-420; }
+}
+
+@media screen and (max-width: 380px) {
+  .content { width: $content-width-380; }
+  .special-content { 
+//    width: $special-contents-width-380;
+    padding: $special-contents-padding-380 / 2 $special-contents-padding-380;
+    
+    &.with-picture { padding-top: $special-contents-padding * 1.5; }
+  }
+  section.part .section_title h2 { font-size: $subtitles-font-size-380; }
+}
+
 @import "parts/home";
+@import "parts/introduction";
+@import "parts/technologies";
+
+

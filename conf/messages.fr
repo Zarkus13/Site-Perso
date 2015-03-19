@@ -1,3 +1,5 @@
+site.title=Alexis Weil - Développeur Freelance Java, Scala, Android et Web
+
 menu=Menu
 
 home=Accueil

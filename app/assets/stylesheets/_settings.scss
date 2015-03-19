@@ -1,18 +1,81 @@
 
-$font-main: 'Open-Sans';
+//$font-main: 'Open-Sans';
+$font-main: 'Montserrat';
 $font-title: 'Montserrat';
 $font-second: 'Lobster';
 
 $color-main: #48cfad;
 $color-main-darker: #36967e;
 $color-menu-bg: rgba(72, 207, 173, 0.95);
+$color-second: #E6EBEC;
+$color-second-text: #262626;
 
 $content-width: 1080px;
+$content-width-1200: 940px;
+$content-width-960: 680px;
+$content-width-700: 480px;
+$content-width-500: 400px;
+$content-width-420: 360px;
+$content-width-380: 300px;
+
 $titles-border-width: 2px;
+
+$subtitles-font-size: 5em;
+$subtitles-font-size-960: 4em;
+$subtitles-font-size-700: 3.5em;
+$subtitles-font-size-500: 3em;
+$subtitles-font-size-420: 2.8em;
+$subtitles-font-size-380: 2.5em;
+
+$parts-padding: 100px 0px 50px;
+$parts-padding-960: 75px 0px 37px;
+$parts-padding-700: 50px 0px 25px;
 
 $home-contact-btn-height: 45px;
 $home-separator-circle-size: 20px;
-$home-separator-width: 300px;
 $home-separator-margin: 30px;
+$home-separator-width: 300px;
+$home-separator-width-960: 200px;
+$home-separator-width-700: 160px;
+$home-separator-width-500: 140px;
+$home-separator-width-420: 130px;
+$home-separator-width-380: 120px;
+
+$home-title-padding-bottom: 30px;
 $home-title-font-size: 8em;
-$home-subtitle-font-size: 5em;
+$home-title-font-size-960: 7em;
+$home-title-font-size-700: 6.5em;
+$home-title-font-size-500: 6em;
+$home-title-font-size-420: 5.6em;
+$home-title-font-size-380: 5em;
+
+$home-technologies-padding: 80px;
+$home-technologies-padding-700: 40px;
+$home-technologies-icon-size: 9em;
+$home-technologies-icon-size-700: 8em;
+$home-technologies-icon-size-380: 7em;
+$home-technologies-title-size: 2em;
+$home-technologies-margin-bottom: 20px;
+
+$round-pictures-size: 88px;
+$round-pictures-border-size: 3px;
+$round-pictures-border-color: white;
+
+$special-contents-color: #7F7F7F;
+$special-contents-bg-color: white;
+$special-contents-padding: 40px;
+$special-contents-font-size: 15px;
+$special-contents-border-radius: 10px;
+$special-contents-width: 595px;
+$special-contents-width-960: 495px;
+$special-contents-width-700: 315px;
+$special-contents-width-500: 215px;
+$special-contents-width-420: 175px;
+$special-contents-width-380: 135px;
+$special-contents-padding-380: 20px;
+
+$introduction-experiences-first-max-width: 800px;
+
+$technologies-max-width: 800px;
+$technologies-icons-margin-right: 40px;
+$technologies-description-padding-top: 25px;

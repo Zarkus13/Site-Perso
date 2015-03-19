@@ -1,0 +1,36 @@
+@import "../settings";
+@import "compass/css3";
+
+#technologies {
+  
+  .technology {
+    max-width: $technologies-max-width;
+    margin: 0 auto;
+    padding-top: $technologies-icons-margin-right;
+    
+    .icon { 
+      float: left;
+      margin-right: $technologies-icons-margin-right;
+    }
+    
+    .description {
+      font-size: 1.2em;
+      line-height: 1.5em;
+      text-align: left;
+      padding-top: $technologies-description-padding-top;
+    }
+
+    @media screen and (max-width: 700px) {
+      .icon {
+        float: none;
+        margin-right: 0px;
+      }
+      
+      .description { 
+        padding-top: $technologies-description-padding-top/2;
+        text-align: justify;
+      }
+    }
+  }
+  
+}
