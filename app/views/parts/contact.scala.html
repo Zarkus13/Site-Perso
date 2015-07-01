@@ -1,0 +1,39 @@
+@()
+
+<section id="contact" class="part">
+    <div class="border-bottom"></div>
+    <div class="content">
+        <div class="section_title">
+            <h2>@Messages("contact.me")</h2>
+            <div class="title_border"></div>
+        </div>
+
+        <div id="contact-form">
+                <!-- Name -->
+            <input type="text" name="name" placeholder="Nom *" id="form-name" class="wow fadeInLeft" />
+
+                <!-- Email -->
+            <input type="text" name="mail" placeholder="Email *" id="form-mail" class="wow fadeIn" />
+
+                <!-- Subject -->
+            <input type="text" name="mail" placeholder="Objet *" id="form-subject" class="wow fadeInRight last" />
+
+                <!-- Message (textarea) -->
+            <textarea name='message' rows="5" cols="62" id="form-message" class="wow fadeIn" placeholder="Message *"></textarea>
+
+                <!-- Button -->
+            <p>
+                <button type="submit" id="button" class="wow fadeInUp">M'ENVOYER CE MESSAGE !</button>
+            </p>
+
+            <p id="required">
+                * Champs requis !
+            </p>
+
+                <!--container for the results of mail.php-->
+            <div id="result"></div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</section>

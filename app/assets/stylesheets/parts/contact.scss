@@ -1,0 +1,46 @@
+@import "../settings";
+@import "compass/css3";
+
+#contact {
+
+  #contact-form {
+    width: $contact-form-width;
+
+    textarea {
+      width: 100%;
+    }
+
+    input[type='text'] {
+      width: ($contact-form-width - 2 * $contact-form-input-margin) / 3;
+      margin-right: $contact-form-input-margin;
+      
+      &.last {
+        margin-right: 0px;
+      }
+    }
+
+    .contact-confirm {
+      font-size: 2em;
+      line-height: 1.5em;
+      text-align: center;
+
+      .title {
+        color: $color-main;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        margin: 60px auto 20px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    #contact-form {
+      width: 100%;
+
+      input[type='text'] {
+        width: 100%;
+      }
+    }
+  }
+
+}

@@ -12,5 +12,6 @@ libraryDependencies ++= Seq(
   jdbc,
   anorm,
   cache,
-  ws
+  ws,
+  "com.sendgrid" % "sendgrid-java" % "2.2.2"
 )
