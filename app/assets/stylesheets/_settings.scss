@@ -31,6 +31,30 @@ $parts-padding: 100px 0px 50px;
 $parts-padding-960: 75px 0px 37px;
 $parts-padding-700: 50px 0px 25px;
 
+$round-pictures-size: 88px;
+$round-pictures-border-size: 3px;
+$round-pictures-border-color: white;
+
+$special-contents-color: #7F7F7F;
+$special-contents-bg-color: white;
+$special-contents-padding: 40px;
+$special-contents-font-size: 15px;
+$special-contents-border-radius: 10px;
+$special-contents-width: 595px;
+$special-contents-width-960: 495px;
+$special-contents-width-700: 315px;
+$special-contents-width-500: 215px;
+$special-contents-width-420: 175px;
+$special-contents-width-380: 135px;
+$special-contents-padding-380: 20px;
+
+$slider-control-bubble-radius: 16px;
+$slider-control-bubble-border-width: 1px;
+
+
+/**************** PARTS ******************/
+
+// HOME
 $home-contact-btn-height: 45px;
 $home-separator-circle-size: 20px;
 $home-separator-margin: 30px;
@@ -57,25 +81,14 @@ $home-technologies-icon-size-380: 7em;
 $home-technologies-title-size: 2em;
 $home-technologies-margin-bottom: 20px;
 
-$round-pictures-size: 88px;
-$round-pictures-border-size: 3px;
-$round-pictures-border-color: white;
-
-$special-contents-color: #7F7F7F;
-$special-contents-bg-color: white;
-$special-contents-padding: 40px;
-$special-contents-font-size: 15px;
-$special-contents-border-radius: 10px;
-$special-contents-width: 595px;
-$special-contents-width-960: 495px;
-$special-contents-width-700: 315px;
-$special-contents-width-500: 215px;
-$special-contents-width-420: 175px;
-$special-contents-width-380: 135px;
-$special-contents-padding-380: 20px;
-
+// INTRODUCTION
 $introduction-experiences-first-max-width: 800px;
 
+// TECHNOLOGIES
 $technologies-max-width: 800px;
 $technologies-icons-margin-right: 40px;
 $technologies-description-padding-top: 25px;
+
+// WORKS
+$works-max-width: 700px;
+$works-title-max-width: 500px;

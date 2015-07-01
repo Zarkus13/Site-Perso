@@ -1,0 +1,88 @@
+@import "../settings";
+@import "compass/css3";
+
+#works {
+
+  #works-slider {
+    position: relative;
+
+    li {
+      position: absolute !important;
+      top: 0px;
+
+      .work {
+        max-width: $works-max-width;
+        margin-left: auto;
+        margin-right: auto;
+
+        .work-title {
+          max-width: $works-title-max-width;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: 2em;
+          text-transform: uppercase;
+          line-height: $round-pictures-size;
+
+          .work-icon {
+            float: left;
+          }
+
+          .title {
+            float: left;
+            padding-left: 40px;
+          }
+
+          a {
+            margin-left: 15px;
+            font-size: 0.6em;
+            color: white;
+            float: right;
+            margin-top: -2px;
+          }
+        }
+
+        .work-content {
+          margin-top: 40px;
+          font-size: 1.2em;
+          line-height: 1.5em;
+          text-align: justify;
+        }
+      }
+    }
+
+  }
+
+  .works-control-nav {
+    display: block;
+    width: 100%;
+    padding-top: 28px;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      width: $slider-control-bubble-radius;
+      height: $slider-control-bubble-radius;
+      margin: $slider-control-bubble-radius / 4;
+
+      @include border-radius($slider-control-bubble-radius / 2);
+
+      a {
+        display: block;
+        width: $slider-control-bubble-radius - $slider-control-bubble-border-width * 2;
+        height: $slider-control-bubble-radius - $slider-control-bubble-border-width * 2;
+        text-indent: -999999;
+        font-size: 0px;
+        background: #FFF;
+        border: $slider-control-bubble-border-width solid #CCD6D8;
+
+        @include border-radius($slider-control-bubble-radius / 2);
+
+        &.works-active {
+          background: $color-main;
+          border: $slider-control-bubble-border-width solid white;
+        }
+      }
+    }
+  }
+
+}
