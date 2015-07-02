@@ -23,7 +23,7 @@
             var overlay_menu = $('div.overlay-menu');
             //if top nav exist
             if ($('#top-nav').length != 0) {
-                jQuery('html,body').stop().animate({scrollTop: jQuery("div" + id).offset().top}, 'slow', function () {
+                jQuery('html,body').stop().animate({scrollTop: jQuery(id).offset().top}, 'slow', function () {
                     if (navigator.userAgent.indexOf('iPad') != -1) {
                         var yPos = window.pageYOffset;
                         var jQueryfixedElement = jQuery('div#top-nav');
