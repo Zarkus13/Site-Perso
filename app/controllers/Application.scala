@@ -1,26 +1,22 @@
 package controllers
 
-import com.sendgrid.SendGrid
-import com.sendgrid.SendGrid.Email
-import play.api.{Logger, Play}
+import play.api.Logger
+import play.api.Play.current
+import play.api.data.Form
+import play.api.data.Forms._
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.libs.json.Json
+import play.api.libs.mailer.{Email, MailerPlugin}
 import play.api.libs.ws.WS
 import play.api.mvc._
-import play.api.data.Forms._
-import play.api.data.Form
-import play.api.libs.concurrent.Execution.Implicits.defaultContext
+
 import scala.concurrent.Future
-import play.api.Play.current
 
 object Application extends Controller {
 
   case class MailForm(name: String, email: String, subject: String, message: String)
 
   implicit val format = Json.format[MailForm]
-
-  val sendgridUsername = Play.configuration.getString("sendgrid.username").get
-  val sendgridPassword = Play.configuration.getString("sendgrid.password").get
-  val sendgrid = new SendGrid(sendgridUsername, sendgridPassword)
 
   val mailForm = Form(
     mapping(
@@ -58,12 +54,15 @@ object Application extends Controller {
         WS.url(routes.Application.showEmail().absoluteURL()).post(
           Json.toJson(mail)
         ).map(resp => {
-          Logger.debug(s"Statut d'envoi du mail : ${resp.status} - ${resp.statusText}")
-          val email = new Email()
-          email.addTo("w.alexisweil@gmail.com")
-          email.setFrom(mail.email)
-          email.setSubject("Prise de contact par " + mail.name)
-          email.setHtml(resp.body)
+          val email = Email(
+            "Prise de contact par " + mail.name,
+            mail.email,
+            Seq("w.alexisweil@gmail.com"),
+            bodyHtml = Some(resp.body)
+          )
+
+          val res = MailerPlugin.send(email)
+          Logger.debug(s"Envoi du mail : $res")
 
           Ok
         })
