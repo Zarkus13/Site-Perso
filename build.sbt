@@ -13,5 +13,6 @@ libraryDependencies ++= Seq(
   anorm,
   cache,
   ws,
-  "com.sendgrid" % "sendgrid-java" % "2.2.2"
+  "com.sendgrid" % "sendgrid-java" % "2.2.2",
+  "com.logentries" % "logentries-appender" % "1.1.30"
 )

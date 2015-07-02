@@ -184,7 +184,7 @@
             },
             success: function (results) {
                 $('div#contact-loading').remove();
-                $('#contact-form').html('<div class="contact-confirm"><div class="title">Merci !</div>Votre message a bien été envoyé ! Je vous recontacterait le plus vite possible ;)</div>');
+                $('#contact-form').html('<div class="contact-confirm"><div class="title">Merci !</div>Votre message a bien été envoyé ! Je vous recontacterai le plus vite possible ;)</div>');
             }
         });
 

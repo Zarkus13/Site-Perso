@@ -2,7 +2,7 @@ package controllers
 
 import com.sendgrid.SendGrid
 import com.sendgrid.SendGrid.Email
-import play.api.Play
+import play.api.{Logger, Play}
 import play.api.libs.json.Json
 import play.api.libs.ws.WS
 import play.api.mvc._
@@ -53,9 +53,12 @@ object Application extends Controller {
     mailForm.bindFromRequest().fold(
       errors => Future(BadRequest),
       mail => {
+        Logger.debug(s"email : ${mail.name} (${mail.email}) - Subject : ${mail.subject} - Message : ${mail.message}")
+
         WS.url(routes.Application.showEmail().absoluteURL()).post(
           Json.toJson(mail)
         ).map(resp => {
+          Logger.debug(s"Statut d'envoi du mail : ${resp.status} - ${resp.statusText}")
           val email = new Email()
           email.addTo("w.alexisweil@gmail.com")
           email.setFrom(mail.email)
