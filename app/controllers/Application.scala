@@ -70,4 +70,8 @@ object Application extends Controller {
     )
   }
 
+  def formationScala = Action(parse.anyContent) { implicit req =>
+    Redirect("https://drive.google.com/drive/folders/0B3mVkQgKEf6eSTNYRm1ZVzNlNlE?usp=sharing")
+  }
+
 }
